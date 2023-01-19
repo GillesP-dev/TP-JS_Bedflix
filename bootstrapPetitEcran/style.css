@@ -1,0 +1,21 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+.bg-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .bg-black{
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+  }
+  .btn {
+    margin-top: -15px;
+  }
+  .carousel-item .active img {
+        margin-left: 53px;
+  }
