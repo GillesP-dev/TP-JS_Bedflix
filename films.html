@@ -11,7 +11,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
         </script>
     <link rel="stylesheet" href="style.css">
-    <title>Serie</title>
+    <title>Film</title>
 </head>
 
 <body>
@@ -37,10 +37,10 @@
                     </li>
 
                 </ul>
-                <div id="contour">
-                    <div class="border border-2 p-1">
-                        <img src="/images/loupewhite.png" alt="loupewhite">
-                        <input type="submit" placeholder="Titre, Genres,..." aria-label="recherche" class="bg-dark">
+                <div id="champRech1">
+                    <div class="border border-2 p-1 rounded-pill">
+                        <img src="/images/loupewhite.png" alt="loupewhite" onclick="rechTitres()">
+                        <input id="champRech" type="text" placeholder="Titre, Genres,..." class="bg-dark w-75" value="">
                     </div>
                 </div>
                 <img class="bell ms-3" src="/images/Vector(4).png" alt="bell">
@@ -48,57 +48,32 @@
             </div>
         </div>
     </nav>
+    <!---------------------------------------Fin nav---------------------------------------------------------------->
     <div class="container-fuilde row position-relative">
-        <img class="fond coll-12" src="/images/Films.png" alt="font d'ecran">
-        <span class="titreSerie">Films</span>
-        <!-- debut drop-->
-        <div class="dropdown position-absolute " data-bs-theme="dark" style="left: 400px;top: 200px;">
-            <button class="btn btn-secondary dropdown-toggle bg-transparent border-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Genres
-            </button>
-            <ul class="dropdown-menu multi-column columns-3">
-                <div class="row" >
-                    <div class="col-sm-4" >
-                        <ul class="multi-column-dropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Anime</a></li>
-                            <li><a class="dropdown-item" href="#">comédies</a></li>
-                            <li><a class="dropdown-item" href="#">Courts-métrages</a></li>
-                            <li><a class="dropdown-item" href="#">Documentaires</a></li>
-                            <li><a class="dropdown-item" href="#">Drames</a></li>
-                            <li><a class="dropdown-item" href="#">Européen</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4" >
-                        <ul class="multi-column-dropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Anime</a></li>
-                            <li><a class="dropdown-item" href="#">comédies</a></li>
-                            <li><a class="dropdown-item" href="#">Courts-métrages</a></li>
-                            <li><a class="dropdown-item" href="#">Documentaires</a></li>
-                            <li><a class="dropdown-item" href="#">Drames</a></li>
-                            <li><a class="dropdown-item" href="#">Européen</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4" >
-                        <ul class="multi-column-dropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Anime</a></li>
-                            <li><a class="dropdown-item" href="#">comédies</a></li>
-                            <li><a class="dropdown-item" href="#">Courts-métrages</a></li>
-                            <li><a class="dropdown-item" href="#">Documentaires</a></li>
-                            <li><a class="dropdown-item" href="#">Drames</a></li>
-                            <li><a class="dropdown-item" href="#">Européen</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </ul>
+        <div class="container bg-black">
+            <div class="row">
+                <div id="fond" class="col"></div>
+            </div>
+        </div>
+    <!--------------------------------------------modale------------------------------------------------------------->  
+    <div class="modal" id="modalFilm" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
-            <!-- fin drop-->
-            <img style=" width: 100px;height: 150px; top: 400px; left: 140px;" src="/images/b logo.png" alt="logo"
-                class="position-absolute">
-            <img style=" width: 150px;height: 60px; top: 430px; left: 250px;" src="/images/série.png" alt=""
-                class="position-absolute">
+        </div>
+      </div>
+         
+    <!--------------------------------------------fin modale---------------------------------------------------------->      
 
             <p style="  width:fit-content; bottom:5px; left: 140px;color: white;z-index: 2;font-size: 40px; font-weight: 400;"
                 class="position-absolute">Films du moment</p>
@@ -267,6 +242,7 @@
                 </div>
             </div>
         </div>
+        <script src="/script.js" type="text/javascript"></script>
 </body>
 
 </html>

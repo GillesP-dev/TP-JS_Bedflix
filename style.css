@@ -159,3 +159,15 @@ div .commentaire {
         overflow-x: hidden;
     }
 }
+.fondFilm {
+    margin-top: 92px;
+    margin-bottom: 80px;
+}
+.imageTitre {
+    margin-top: 85px;
+    margin-right: 21px;
+    width: 300px;
+    height: 420px;
+    
+    
+}
