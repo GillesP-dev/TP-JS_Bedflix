@@ -171,3 +171,40 @@ div .commentaire {
     
     
 }
+/*-------------------modale------------------*/
+#surcouche{
+    display: none;
+    position: fixed;               
+    top: 0; right:0; bottom:0; left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index : 1000;
+    }
+   
+    
+    
+    button{
+        cursor: pointer;
+    }
+    .labelButon{
+        padding: 5px 10px;
+        background-color: #3636A3;
+        color : #fff;
+        position: absolute;
+        bottom:0px;
+        left :257px;
+        z-index: 1005;
+         
+    }
+    #msgbox{
+        
+        width: min-content;
+        padding: 15px;
+        position: relative;
+        top: 25%;
+        left: 36%;
+        background-color: white;
+        border: 10px solid #aaa;
+    }
+    #msgbox p {
+        margin-bottom: 30px;
+    }
