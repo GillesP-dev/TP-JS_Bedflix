@@ -4,6 +4,7 @@ let imageFilm;
 let totalTitres;
 let ma_recherch;
 let images;
+let posterFilm = [];
 let tabtitre = []; 
 let modale = document.querySelector("#modalFilm");
 let rechTitre = document.querySelector("#champRech");
@@ -64,7 +65,8 @@ async function recherche(){
         for (let i=0; i<totalTitres.length;i++){
             if(totalTitres[i].Type == "movie"){
                
-            tabtitre.push(totalTitres[i].Title) ;  
+            tabtitre.push(totalTitres[i].Title) ; 
+            posterFilm.push(totalTitres[i].Poster) ;
             imageFilm = document.createElement('img');
             imageFilm.setAttribute("src",totalTitres[i].Poster);
             imageFilm.setAttribute("type","button");
@@ -89,7 +91,7 @@ async function recherche(){
             let titre = tabtitre[index];
             surcouche1.style.display = "block";
             titremsg.textContent = titre;
-            imagesbox.setAttribute("src",totalTitres[index].Poster);
+            imagesbox.setAttribute("src",posterFilm[index]);
         });
     }); 
 }
